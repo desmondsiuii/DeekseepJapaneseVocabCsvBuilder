@@ -22,8 +22,8 @@ def deduplicate_by_second_column(input_file="task-result-accumulate.txt"):
     try:
         with open(input_file, 'r', encoding='utf-8') as f:
             content = f.read()
-        with open(backup_file, 'w', encoding='utf-8') as f:
-            f.write(content)
+        # with open(backup_file, 'w', encoding='utf-8') as f:
+        #     f.write(content)
         print(f"📦 Backup created: {backup_file}")
     except Exception as e:
         print(f"⚠️ Could not create backup: {e}")
