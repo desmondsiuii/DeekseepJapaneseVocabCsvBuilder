@@ -153,7 +153,7 @@ def main():
         source = sys.argv[1]
         target = sys.argv[2] if len(sys.argv) > 2 else "task-result-accumulate.txt"
     else:
-        source = "task-result-trimed.txt"
+        source = "task-result.txt"
         target = "task-result-accumulate.txt"
     
     append_with_cleanup(source, target)
