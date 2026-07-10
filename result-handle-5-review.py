@@ -3,7 +3,7 @@ import sys
 from openai import OpenAI
 from secret import DEEPSEEK_API_KEY  # Make sure you have this
 
-def read_vocab_from_file(filename="summary.txt"):
+def read_vocab_from_file(filename="task-result-summary.txt"):
     """Read Japanese vocab from file, separated by comma"""
     try:
         with open(filename, 'r', encoding='utf-8') as f:
