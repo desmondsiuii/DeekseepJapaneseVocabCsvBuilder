@@ -115,11 +115,11 @@ def main():
     print("JAPANESE VOCAB FILTER (NON-VERBS)")
     print("=" * 60)
     
-    # Read vocab from summary.txt
-    vocab_list = read_vocab_from_file("summary.txt")
+    # Read vocab from task-result-summary.txt
+    vocab_list = read_vocab_from_file("task-result-summary.txt")
     
     if not vocab_list:
-        print("❌ No vocabulary found. Please check summary.txt")
+        print("❌ No vocabulary found. Please check task-result-summary.txt")
         print("   File should contain Japanese words separated by commas")
         sys.exit(1)
     
