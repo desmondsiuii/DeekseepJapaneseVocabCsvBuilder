@@ -91,18 +91,18 @@ def remove_lines(data_file="task-result-accumulate.txt", lines_to_remove=None, b
         return False
     
     # Create backup
-    if backup:
-        backup_file = f"{data_file}.backup_{datetime.now().strftime('%Y%m%d_%H%M%S')}"
-        try:
-            import shutil
-            shutil.copy2(data_file, backup_file)
-            print(f"📦 Backup created: {backup_file}")
-        except Exception as e:
-            print(f"⚠️ Could not create backup: {e}")
-            response = input("Continue without backup? (y/n): ").lower()
-            if response != 'y':
-                print("❌ Operation cancelled")
-                return False
+    # if backup:
+    #     backup_file = f"{data_file}.backup_{datetime.now().strftime('%Y%m%d_%H%M%S')}"
+    #     try:
+    #         import shutil
+    #         shutil.copy2(data_file, backup_file)
+    #         print(f"📦 Backup created: {backup_file}")
+    #     except Exception as e:
+    #         print(f"⚠️ Could not create backup: {e}")
+    #         response = input("Continue without backup? (y/n): ").lower()
+    #         if response != 'y':
+    #             print("❌ Operation cancelled")
+    #             return False
     
     # Read all lines
     with open(data_file, 'r', encoding='utf-8') as f:
